@@ -1,0 +1,34 @@
+version: "2.3"
+
+services:
+  blog:
+    image: vapor-service
+    container_name: blog-instance
+    ports:
+        - "8080:8080"
+
+#   prometheus:
+#     container_name: prometheus_container
+#     image: prom/prometheus
+#     volumes:
+#       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:Z
+#     command:
+#       - '--config.file=/etc/prometheus/prometheus.yml'
+#       - '--storage.tsdb.path=/prometheus'
+#       - '--storage.tsdb.retention=20d'
+#       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+#       - '--web.console.templates=/usr/share/prometheus/consoles'
+#     ports:
+#       - '9090:9090'
+
+#   node_exporter:
+#     container_name: node_exporter_container
+#     image: prom/node-exporter
+#     ports:
+#       - '9100:9100'
+
+#   grafana:
+#     container_name: grafana_container
+#     image: grafana/grafana
+#     ports:
+#       - '3000:3000'
