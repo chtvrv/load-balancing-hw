@@ -15,6 +15,15 @@ services:
     ports:
       - '9090:9090'
 
+  nginx:
+    container_name: nginx
+    image: nginx
+    volumes:
+      - ./Monitoring/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+      - "443:443"
+
   grafana:
     container_name: grafana_container
     image: grafana/grafana
