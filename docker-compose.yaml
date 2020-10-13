@@ -6,6 +6,9 @@ services:
     image: prom/prometheus
     volumes:
       - ./Monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:Z
+    environment: 
+      - BLOG_INSTANCE_A=${BLOG_INSTANCE_A}
+      - SYSTEM_INSTANCE_A=${SYSTEM_INSTANCE_A}
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
