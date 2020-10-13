@@ -5,8 +5,8 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: [${BLOG_INSTANCE_A}]
+      - targets: [BLOG_INSTANCE_A]
 
   - job_name: 'system'
     static_configs:
-      - targets: [${SYSTEM_INSTANCE_A}]
+      - targets: [SYSTEM_INSTANCE_A]
