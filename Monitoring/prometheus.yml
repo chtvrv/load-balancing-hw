@@ -5,8 +5,8 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: [${BLOG_INSTANCE_A}]
 
   - job_name: 'system'
     static_configs:
-      - targets: ['node_exporter:9100']
+      - targets: [${SYSTEM_INSTANCE_A}]
